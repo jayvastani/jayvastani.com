@@ -457,12 +457,11 @@ body.dark-theme {
 }
 
 .home__social {
-  height: max-content;
+  height: auto;
   position: absolute;
   left: -3rem;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: grid;
   row-gap: 1rem;
 }
@@ -1021,6 +1020,7 @@ body.dark-theme {
   display: grid;
   place-items: center;
   transition: background-color .3s;
+  line-height: 1;
 }
 
 .contact__social-link:hover {
@@ -1107,6 +1107,9 @@ body.dark-theme {
 
 
 /*=============== BREAKPOINTS ===============*/
+
+
+
 /* For small devices */
 @media screen and (max-width: 340px) {
   .container {
@@ -1485,6 +1488,7 @@ body.dark-theme {
   .contact__social-link{
     font-size: 1.5rem;
     padding: .5rem;
+    line-height: 1;
   }
   .contact__message {
     bottom: -2.5rem;
@@ -1504,5 +1508,11 @@ body.dark-theme {
   .scrollup {
     right: 3rem;
     box-shadow: 4px 4px 4px hsla(0, 0%, 40%, .3);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .home__social-link {
+    font-size: 1rem !important;
+    padding: 4px !important;
   }
 }
