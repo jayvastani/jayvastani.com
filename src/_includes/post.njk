@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<section class="blog-post section">
+   <div class="container blog-post__container">
+      <a href="/blog/" class="blog-post__back">
+         <i class="ri-arrow-left-line"></i> Back to Blog
+      </a>
+      <h1 class="blog-post__title">{{ title }}</h1>
+      <p class="blog-post__date">{{ date | readableDate }}</p>
+      <div class="blog-post__content">
+         {{ content | safe }}
+      </div>
+   </div>
+</section>

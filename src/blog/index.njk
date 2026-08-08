@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: Blog | Jay Vastani
+description: Notes on product management, AI-first workflows, and trust & identity — lessons from 10+ years building products.
+---
+<section class="blog section" id="blog">
+   <div class="container">
+      <h2 class="section__title-1">
+         <span>Blog</span>
+      </h2>
+      <p class="blog__intro">
+         Notes on product management, AI-first workflows, trust &amp; identity, and what
+         I've learned building things over the years.
+      </p>
+
+      {% set posts = collections.posts %}
+      {% if posts.length %}
+      <div class="blog__list">
+         {% for post in posts %}
+         <a class="blog__item" href="{{ post.url }}">
+            <span class="blog__item-date">{{ post.date | readableDate }}</span>
+            <h3 class="blog__item-title">{{ post.data.title }}</h3>
+            {% if post.data.description %}
+            <p class="blog__item-description">{{ post.data.description }}</p>
+            {% endif %}
+            <span class="blog__item-link">Read more <i class="ri-arrow-right-line"></i></span>
+         </a>
+         {% endfor %}
+      </div>
+      {% else %}
+      <p class="blog__empty">No posts yet — first one is coming soon.</p>
+      {% endif %}
+   </div>
+</section>

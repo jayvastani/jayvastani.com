@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+      <!--=============== GOOGLE FONTS ===============-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="/assets/css/styles-v2.css">
+      <title>{{ title or "Jay Vastani | Technical Product Manager" }}</title>
+   </head>
+   <body class="dark-theme">
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="/" class="nav__logo">
+               <span class="nav__logo-circle">J</span>
+               <span class="nav__logo-name">Jay Vastani.</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <span class="nav__title">Menu</span>
+               <h3 class="nav__name">Jay</h3>
+
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="/#home" class="nav__link">Home</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="/#about" class="nav__link">About</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="/#skills" class="nav__link">Skills</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="/#contact" class="nav__link">Contact Me</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="/blog/" class="nav__link nav__link-button">Blog</a>
+                  </li>
+               </ul>
+               <!-- Close Button-->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+            <div class="nav__buttons">
+               <!--toggle button-->
+               <i class="ri-moon-line change-theme ri-sun-line" id="theme-button"></i>
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-4-line"></i>
+
+               </div>
+            </div>
+         </nav>
+
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         {{ content | safe }}
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <ul class="footer__links">
+               <li>
+                  <a href="/#about" class="footer__link">About</a>
+               </li>
+               <li>
+                  <a href="/#skills" class="footer__link">Skills</a>
+               </li>
+               <li>
+                  <a href="/blog/" class="footer__link">Blog</a>
+               </li>
+            </ul>
+            <span class="footer__copy">
+               &#169; No rights reserved.
+            </span>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-s-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="/assets/js/assetsjsscrollreveal.min.js"></script>
+
+      <!--=============== EMAIL JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+      <!--=============== MAIN JS ===============-->
+      <script src="/assets/js/main.js"></script>
+   </body>
+</html>
